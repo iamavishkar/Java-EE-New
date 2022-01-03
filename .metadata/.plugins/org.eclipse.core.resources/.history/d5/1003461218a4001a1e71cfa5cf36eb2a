@@ -1,0 +1,14 @@
+<%@ taglib uri="/struts-tags" prefix="s" %>
+
+<table border="2">
+
+<s:iterator value="list">
+<tr>
+<td><s:property value="id"/></td>
+<td><s:property value="name"/></td>
+<td><s:property value="price"/></td>
+<td></td>
+</tr>
+</s:iterator>
+
+</table>

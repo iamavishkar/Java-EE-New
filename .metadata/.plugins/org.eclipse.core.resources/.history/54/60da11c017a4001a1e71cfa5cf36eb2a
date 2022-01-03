@@ -1,0 +1,7 @@
+<%@ taglib uri="/struts-tags" prefix="s" %>
+
+<s:iterator value="list">
+<s:property value="id"/>
+<s:property value="name"/>
+<s:property value="price"/>
+</s:iterator>

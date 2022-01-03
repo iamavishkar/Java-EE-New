@@ -1,0 +1,4 @@
+<%
+String num = request.getParameter("name");
+out.print(num);
+%>

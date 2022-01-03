@@ -1,0 +1,9 @@
+<html>
+<head>
+<title>Email Avail using AJAX</title>
+<script src="emailajax.js"></script>
+</head>
+<body>
+<h1>Email Avail using AJAX!</h1>
+</body>
+</html>

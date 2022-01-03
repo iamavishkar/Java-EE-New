@@ -1,0 +1,9 @@
+<%@ page import="java.sql.*" %>
+<%
+
+String email = request.getParameter("email");
+Class.forName("com.mysql.jdbc.driver");
+Connection con = DriverManager.getConnection("jdbc:mysql//localhost/college","root","");
+
+
+%>

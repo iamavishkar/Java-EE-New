@@ -1,0 +1,14 @@
+function email_fun(em){
+	var request = new XMLHttpRequest();
+	var email = document.getElementById("email").value;
+	var url = "checkemail.jsp?email="+email;
+	request.onreadystatechange = function(){
+		
+		if(this.readyState ==4 && this.status==200){
+			document.getElementById("status").innerHTML = this.responseText;
+		}
+	};
+	
+	response.open("post",url,true);
+	response.send();
+}

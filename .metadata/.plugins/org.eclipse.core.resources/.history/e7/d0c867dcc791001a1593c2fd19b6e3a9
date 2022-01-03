@@ -1,0 +1,21 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:out value="hello jsp"></c:out>
+<br>
+<c:forEach var="i" begin="1" end="10">
+<c:out value="${i}"></c:out>
+<br>
+</c:forEach>
+<br />
+
+<c:set var="name" scope="session" value="Aditya" />
+<c:out value="${name}"></c:out>
+
+<c:set var="income" scope="session" value="100" />
+
+<c:if test="${income!=100}">
+<p>If executed.</p>
+</c:if>
+
+<c:if test="${income==100}">
+<p>Second if executed</p>
+</c:if>

@@ -1,0 +1,18 @@
+<html>
+<head>
+<script src="myajax.js"></script>
+<title>My AJAX Project</title>
+</head>
+<body>
+
+<h1>Print table using AJAX</h1>
+<br />
+Enter number: <input type="text" id="num" placeholder="Enter number" />
+<input type="submit" value="Submit" />
+
+<h2>Table to print here:</h2>
+<br/>
+<span id="result"><br /></span>
+
+</body>
+</html>

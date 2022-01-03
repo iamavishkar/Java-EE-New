@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;HQLProject/src/aman/DeleteTest.java&apos; to &apos;Delete.java&apos;" description="Rename resource &apos;DeleteTest.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/aman/DeleteTest.java" name="Delete.java" stamp="1590484454991" updateReferences="true"/>
+</session>

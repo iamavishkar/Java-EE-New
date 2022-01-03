@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;AJAXmyProject/WebContent/table.js&apos; to &apos;table.jsp&apos;" description="Rename resource &apos;table.js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/table.js" name="table.jsp" stamp="1589547879013" updateReferences="true"/>
+</session>

@@ -1,0 +1,13 @@
+<html>
+<head>
+<title>Email Avail using AJAX</title>
+<script src="emailajax.js"></script>
+</head>
+<body>
+<h1>Email Avail using AJAX!</h1>
+<br/>
+<p>Enter email address:</p><br/>
+<input type="text" id="email" onkeyup="email_fun()" />
+<span id="status"></span>
+</body>
+</html>

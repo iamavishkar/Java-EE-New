@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>MyJQuery</title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function(){
+	/*
+$("#btn").click(function(){
+	$("#text").load("home.jsp");
+});	*/
+$("#btn").click(function(){
+	var n = $("#name").val();
+$.ajax({url:"home.jsp",data:{name:n},type:"post",success:function(data){
+	$("#text").html(data);
+}});
+});
+});
+
+</script>
+</head>
+<body>
+
+<div id="text"></div>
+<form action="" method="post">
+Name: <input type="text" id="name" />
+<br />
+<button type="button" id="btn">Click me!</button>
+</form>
+
+
+
+</body>
+</html>

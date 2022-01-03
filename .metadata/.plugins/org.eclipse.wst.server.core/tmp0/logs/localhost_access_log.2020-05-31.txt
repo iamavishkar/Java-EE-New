@@ -1,0 +1,3 @@
+127.0.0.1 - - [31/May/2020:21:43:09 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [31/May/2020:21:43:16 +0530] "GET /TheStruts/index.jsp HTTP/1.1" 200 825
+0:0:0:0:0:0:0:1 - - [31/May/2020:21:43:31 +0530] "POST /TheStruts/product.action;jsessionid=8BFE70145559936F5AD94B6BF9F204C9 HTTP/1.1" 200 78

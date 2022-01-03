@@ -1,0 +1,5 @@
+127.0.0.1 - - [28/May/2020:18:38:11 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [28/May/2020:18:38:18 +0530] "GET /JSPHIbernate/index.jsp HTTP/1.1" 200 244
+0:0:0:0:0:0:0:1 - - [28/May/2020:18:38:23 +0530] "GET /JSPHIbernate/index.jsp HTTP/1.1" 200 244
+0:0:0:0:0:0:0:1 - - [28/May/2020:18:38:47 +0530] "POST /JSPHIbernate/home.jsp HTTP/1.1" 500 3949
+0:0:0:0:0:0:0:1 - - [28/May/2020:18:40:17 +0530] "POST /JSPHIbernate/home.jsp HTTP/1.1" 200 11

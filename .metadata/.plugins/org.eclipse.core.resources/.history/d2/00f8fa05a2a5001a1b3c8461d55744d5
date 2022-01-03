@@ -1,0 +1,157 @@
+package com.javatpoint;
+
+import com.javatpoint.MyConnection;
+import java.sql.*;
+import java.util.ArrayList;
+
+public class Product {
+private int id;
+private String name;
+private float price;
+ArrayList<Product>list=new ArrayList<>();
+
+public ArrayList<Product> getList() {
+	return list;
+}
+public void setList(ArrayList<Product> list) {
+	this.list = list;
+}
+public int getId() {
+	return id;
+}
+public void setId(int id) {
+	this.id = id;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+public float getPrice() {
+	return price;
+}
+public void setPrice(float price) {
+	this.price = price;
+}
+
+public String insert(){
+	String status="error";
+	try {
+		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost/mydb";
+		String username = "root";
+		String password = "";
+		
+		Class.forName(driver);
+		Connection con = DriverManager.getConnection(url,username,password);
+		
+		String sql = "insert into product(id, name, price)values(?,?,?)";
+		PreparedStatement st = con.prepareStatement(sql);
+		st.setInt(1, id);
+		st.setString(2, name);
+		st.setFloat(3, price);
+		int i=st.executeUpdate();
+		if(i>0) {
+			status = "success";
+		}
+	}catch(Exception e) {
+		e.printStackTrace();
+	}
+	
+	return status;
+}
+
+public String display() {
+	String status="error";
+	
+	try {
+		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost/mydb";
+		String username = "root";
+		String password = "";
+		
+		Class.forName(driver);
+		Connection con = DriverManager.getConnection(url,username,password);
+		
+		String sql = "select * from product";
+		PreparedStatement st = con.prepareStatement(sql);
+		ResultSet rs = st.executeQuery();
+		while(rs.next()) {
+			Product obj = new Product();
+			obj.setId(rs.getInt("id"));
+			obj.setName(rs.getString("name"));
+			obj.setPrice(rs.getFloat("price"));
+			list.add(obj);
+			status = "display";
+		}
+	}catch(Exception e) {
+		e.printStackTrace();
+	}
+	
+	return status;
+}
+
+public String delete() {
+	String status = "error";
+	
+	try {
+		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost/mydb";
+		String username = "root";
+		String password = "";
+		
+		Class.forName(driver);
+		Connection con = DriverManager.getConnection(url,username,password);
+		
+		String sql = "delete from product where id=?";
+		PreparedStatement st = con.prepareStatement(sql);
+		st.setInt(1, id);
+		int i = st.executeUpdate();
+		if(i>0) {
+			status="delete";
+		}
+		
+	}catch(Exception e) {
+		e.printStackTrace();
+	}
+	
+	return status;
+}
+
+public String edit() {
+	String status = "error";
+	
+	try {
+		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost/mydb";
+		String username = "root";
+		String password = "";
+		
+		Class.forName(driver);
+		Connection con = DriverManager.getConnection(url,username,password);
+		String sql = "select * from product where id=?";
+		PreparedStatement st = con.prepareStatement(sql);
+		st.setInt(1, id);
+		ResultSet rs = st.executeQuery();
+		while(rs.next()) {
+			Product obj = new Product();
+			obj.setId(rs.getInt("id"));
+			obj.setName(rs.getString("name"));
+			obj.setPrice(rs.getFloat("price"));
+			list.add(obj);
+			status = "edit";
+		}
+		
+	}catch(Exception e) {
+		e.printStackTrace();
+	}
+	
+	return status;
+}
+
+}
